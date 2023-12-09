@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .w-fit {
+            width: fit-content;
+        }
+
+        .container {
+            width: 80vw;
+        }
+
+        .validation-feedback {
+            color: red;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="dark">
+    <div class="container">
+        <h1 class="border-bottom w-fit px-4 pb-3 mx-auto my-4">Books Management</h1>
+        <form id="formBookNumber" class="row g-3 w-fit mx-auto">
+
+            <div class="col-12">
+
+                <label for="booksNumber" class="form-label">How many books?</label>
+                <input type="text" name="booksNumber" class="form-control" id="booksNumberInput">
+
+                <div id="booksNumber-validation-feedback" class="validation-feedback ">
+                </div>
+
+            </div>
+
+
+            <div class="col-12 ">
+                <button id="submitBooksNumber" class="btn btn-secondary w-100 mx-auto" type="submit">Ok</button>
+            </div>
+
+        </form>
+        <!-- * ====================================================================== -->
+        <!-- !------------------------- -->
+
+        <!-- <form id="formBookData" class="row g-3 w-fit mx-auto" style="display: block;"> -->
+        <form id="formBookData" class="row g-3 w-fit mx-auto" style="display: none;">
+            <h3 class="border-bottom w-fit px-4 pb-3 mx-auto my-4">Books Data</h3>
+
+            <div class="col-12">
+
+                <label for="booksName" class="form-label">Book's Name</label>
+                <input type="text" name="booksName" class="form-control" id="booksNameInput">
+
+                <div id="booksName-validation-feedback" class="validation-feedback ">
+                </div>
+
+                <label for="booksPrice" class="form-label">Price</label>
+                <input type="text" name="booksPrice" class="form-control" id="booksPriceInput">
+
+                <div id="booksPrice-validation-feedback" class="validation-feedback ">
+                </div>
+                <label for="authorName" class="form-label">Author Name</label>
+                <input type="text" name="authorName" class="form-control" id="authorNameInput">
+
+                <div id="authorName-validation-feedback" class="validation-feedback ">
+                </div>
+                <label for="authorEmail" class="form-label">Author E-mail</label>
+                <input type="text" name="authorEmail" class="form-control" id="authorEmailInput">
+
+                <div id="authorEmail-validation-feedback" class="validation-feedback ">
+                </div>
+
+            </div>
+
+
+            <div class="col-12 ">
+                <button id="submitBooksData" class="btn btn-secondary mx-auto d-block" type="submit">Submit</button>
+            </div>
+
+        </form>
+
+
+
+
+
+
+
+
+        <table id="table" class="table mt-5" style="display: none;">
+            <!-- !------------------------- -->
+            <!-- <table id="table" class="table mt-5" style="display: block;"> -->
+            <thead>
+                <tr>
+                    <th scope="col">Book name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Author name</th>
+                    <th scope="col">Author email</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+
+    </div>
+    <script src="task3.js"></script>
+</body>
+
+</html>
