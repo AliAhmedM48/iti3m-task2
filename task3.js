@@ -94,7 +94,7 @@ formBookData.addEventListener('submit', formBookDataValidation);
 
 // * formValidation for the form "submit" event.
 function formBookDataValidation(event) {
-    var isValidName, isValidPrice, isValidauthorName, isValidauthorEmail = 1;
+    var isValidName, isValidPrice, isValidauthorName, isValidauthorEmail = 0;
 
     event.preventDefault();
     // * booksNameInput 
