@@ -148,9 +148,10 @@ function formBookDataValidation(event) {
         // ! empty inputs case.
         feedbackText.innerText = 'Required';
     }
-    else if ((authorEmailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) === null)) {
+    else if (!authorEmailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
         // ! email is invalid format case.
         feedbackText.innerText = 'invalid email, user@example.com';
+        console.log(authorEmailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/));
     }
     else {
         feedbackText.innerText = '';
